@@ -1,4 +1,7 @@
 
+// Break down array into small and small pieces then merge together by compare them.
+// It consume more performance and memory.
+
 export function mergeSort(array) {
   const arrayLength = array.length;
 
