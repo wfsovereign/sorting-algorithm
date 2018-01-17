@@ -1,3 +1,5 @@
+
+// lomuto partition scheme
 export function quickSort(array, left, right) {
   if (left < right) {
     const partitionIndex = partition(array, left, right);
