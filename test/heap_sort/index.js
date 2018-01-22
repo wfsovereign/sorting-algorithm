@@ -10,11 +10,18 @@ describe('heap sort test', () => {
     result.should.deepEqual([1, 2, 3, 4, 6]);
   });
 
-  it('should return [ 1, 2, 3, 14, 4, 9, 7, 8, 10, 16 ] when access [4, 1, 3, 2, 16, 9, 10, 14, 8, 7]', () => {
+  it('should return [1, 2, 3, 4, 7, 8, 9, 10, 14, 16] when access [4, 1, 3, 2, 16, 9, 10, 14, 8, 7]', () => {
     const result = heapSort([4, 1, 3, 2, 16, 9, 10, 14, 8, 7]);
 
     result.should.be.Array();
     result.should.deepEqual([1, 2, 3, 4, 7, 8, 9, 10, 14, 16]);
+  });
+
+  it('should return [1, 2, 3, 4, 7, 8, 9, 14, 16] when access [4, 1, 3, 2, 16, 9, 14, 8, 7]', () => {
+    const result = heapSort([4, 1, 3, 2, 16, 9, 14, 8, 7]);
+
+    result.should.be.Array();
+    result.should.deepEqual([1, 2, 3, 4, 7, 8, 9, 14, 16]);
   });
 
   it('should return [2, 3, 4, 5, 7, 9] when access [7, 5, 2, 4, 3, 9]', () => {
