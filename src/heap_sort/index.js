@@ -26,22 +26,17 @@ function siftDown(array, start, end) {
   let toSwap = root;
 
   while (child <= end) {
-    let maxNodeIndex;
     if (array[toSwap] < array[child]) {
-      maxNodeIndex = child;
+      toSwap = child;
     }
 
-    if (child + 1 <= end && array[toSwap] < array[child + 1]) {
-      if (maxNodeIndex === undefined) {
-        maxNodeIndex = child + 1;
-      } else if (array[maxNodeIndex] < array[child + 1]) {
-        maxNodeIndex = child + 1;
-      }
+    const rightIndex = child + 1;
+
+    if (rightIndex <= end && array[toSwap] < array[rightIndex]) {
+      toSwap = rightIndex;
     }
-    if (maxNodeIndex !== undefined) {
-      swap(array, toSwap, maxNodeIndex);
-      toSwap = maxNodeIndex;
-    }
+
+    swap(array, root, toSwap);
 
     if (toSwap === root) {
       break;
