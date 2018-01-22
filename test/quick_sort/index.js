@@ -23,7 +23,7 @@ describe('quick sort test', () => {
     result.should.deepEqual([1, 2, 3, 4, 5, 6]);
   });
 
-  it('should return [9, 7, 5, 4, 3, 1] when access [1, 3, 4, 5, 7, 9]', () => {
+  it('should return [1, 3, 4, 5, 7, 9] when access [9, 7, 5, 4, 3, 1]', () => {
     const result = quickSort([9, 7, 5, 4, 3, 1], 0, 5);
 
     result.should.deepEqual([1, 3, 4, 5, 7, 9]);

@@ -10,6 +10,7 @@ export function quickSort(array, left, right) {
   return array;
 }
 
+// put the smaller value relative to pivot to the left
 function partition(array, left, right) {
   const pivotValue = array[right];
   let partitionIndex = left;

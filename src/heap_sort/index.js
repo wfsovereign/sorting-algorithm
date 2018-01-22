@@ -23,6 +23,7 @@ function heapify(array, length) {
   }
 }
 
+// find the max value of array index from start to end and move it to the first index.
 function siftDown(array, start, end) {
   let root = start;
   let child = root * 2 + 1;
